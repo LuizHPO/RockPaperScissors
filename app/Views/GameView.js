@@ -7,18 +7,18 @@ export class GameView extends View{
   }
 
   _initialTemplate() {
-
     this._element.innerHTML = `<p>Choose one!</p>`
   }
 
   _template(model) {
+    const {userChoice, compChoice, winner} = model
 
     this._element.innerHTML = `
       <p>
-        You pick <span class="pick">${model.userChoice}</span>
-        and Computer pick <span class="pick">${model.compChoice}</span>
+        User pick <span class="pick">${userChoice}</span>
+        and Computer pick <span class="pick">${compChoice}</span>
       </p>
-      <p>${model.winner ? model.winner + ' won' : 'Draw'}</p>
+      <p>${winner ? winner + ' won' : 'Draw'}</p>
     `
   }
 

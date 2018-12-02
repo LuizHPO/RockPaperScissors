@@ -12,9 +12,10 @@ export class ScoreView extends View{
   }
 
   _template(model) {
+    const {userScore, compScore} = model
 
     this._element.innerHTML = `
-      <span id="user-score">${model.userScore}</span>:<span id="comp-score">${model.compScore}</span>
+      <span id="user-score">${userScore}</span>:<span id="comp-score">${compScore}</span>
     `
   }
 }
